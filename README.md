@@ -1,6 +1,6 @@
 # MMLseg: MultiModal Liver Tumor Segmentation with CT and Report Data
 
-MMLseg 프로젝트는 CT 이미지와 보고서 데이터를 활용한 다중 모달 리버 튜머 세그멘테이션을 목표로 합니다. 프로젝트는 크게 LLM 파인튜닝, 모델 개발, 데이터 전처리, 훈련 및 추론의 네 부분으로 구성됩니다.
+MMLseg 프로젝트는 CT 이미지와 보고서 데이터를 활용한 다중 모달 리버 튜머 세그멘테이션을 목표로 합니다.
 
 ## 목차
 
