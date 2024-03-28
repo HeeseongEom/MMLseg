@@ -1,25 +1,31 @@
 # MMLseg: MultiModal Liver Tumor Segmentation with CT and Report Data
 
-<br><br>
+MMLseg 프로젝트는 CT 이미지와 보고서 데이터를 활용한 다중 모달 리버 튜머 세그멘테이션을 목표로 합니다. 프로젝트는 크게 LLM 파인튜닝, 모델 개발, 데이터 전처리, 훈련 및 추론의 네 부분으로 구성됩니다.
 
-1. ****LLM****
-<br><br>
-finetuning.py: LLAMA-2-7b-hf 모델을 로컬에서 파인튜닝
-llm-inference.py: 튜닝된 모델을 통해 텍스트 임베딩
-<br><br><br><br>
-2. ****model****
-<br><br>
-swin_unetr.py: DownScale layer 추가 & Skip Connection에 Interactive Alignment 모듈을 적용
-swin_unetr_ia_on_all_encoder.py: DownScale layer 추가 & Encoder output에 Interactive Alignment 모듈을 적용
-<br><br><br><br>
-3. ****preprocess****
-<br><br>
-process.py: liver을 최대한 포함하는 320*320 사이즈의 크롭 진행
+## 목차
 
-<br><br><br><br>
-4. ****train_infer****
-<br><br>
+1. [LLM](#1-llm)
+2. [Model](#2-model)
+3. [Preprocess](#3-preprocess)
+4. [Train & Inference](#4-train--inference)
 
-mymodel.py: 최종적으로 모델을 training
-inference.py: .pth 로드하여 추론수행
-<br><br><br><br>
+---
+
+## 1. LLM
+
+- **finetuning.py**: `LLAMA-2-7b-hf` 모델을 로컬에서 파인튜닝합니다.
+- **llm-inference.py**: 파인튜닝된 모델을 사용하여 텍스트 임베딩을 수행합니다.
+
+## 2. Model
+
+- **swin_unetr.py**: DownScale layer를 추가하고 Skip Connection에 Interactive Alignment 모듈을 적용합니다.
+- **swin_unetr_ia_on_all_encoder.py**: DownScale layer를 추가하고 Encoder output에 Interactive Alignment 모듈을 적용합니다.
+
+## 3. Preprocess
+
+- **process.py**: Liver을 최대한 포함하도록 320x320 사이즈로 이미지를 크롭합니다.
+
+## 4. Train & Inference
+
+- **mymodel.py**: 최종적으로 모델을 training합니다.
+- **inference.py**: `.pth` 파일을 로드하여 추론을 수행합니다.
